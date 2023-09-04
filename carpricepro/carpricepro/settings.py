@@ -104,12 +104,12 @@ WSGI_APPLICATION = 'carpricepro.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'carprice',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',  
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dbn3nmq9fs9q7m',
+        'USER': 'jsslsaqebfevze',
+        'PASSWORD': '03aabd549c585b94692a9885bc76eec346d3b8099ef5433819697914268fb678',
+        'HOST': 'ec2-35-169-9-79.compute-1.amazonaws.com',  
+        'PORT': '5432',
         'OPTIONS': {
             'charset': 'utf8mb4',
         }, 
