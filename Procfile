@@ -1,1 +1,1 @@
-web: python carpricepro/manage.py
+web: python carpricepro/manage.py runserver
