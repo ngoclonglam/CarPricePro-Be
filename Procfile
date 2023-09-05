@@ -1,1 +1,1 @@
-web: python carpricepro/manage.py runserver
+web: gunicorn gettingstarted.wsgi
