@@ -38,41 +38,41 @@ class RegisterView(APIView):
 class LoginView(APIView):
     def post(self, request):
         # Đọc dữ liệu từ tệp JSON
-        # with open('data.json', 'r', encoding='utf-8') as file:
-        #     data = json.load(file)
+        with open('data.json', 'r', encoding='utf-8') as file:
+            data = json.load(file)
 
-        # # Lặp qua mỗi mục trong danh sách JSON và chèn nó vào cơ sở dữ liệu
-        # for item in data:
-        #     car = Car(
-        #         Model_Xe=item['Model Xe'],
-        #         Nam_San_Xuat=item['Năm Sản Xuất'],
-        #         Gia_Tien=item['Gía Tiền'],
-        #         Xuat_Xu=item['Xuất Xứ'],
-        #         Tinh_Trang=item['Tình Trạng'],
-        #         Dong_Xe=item['Dòng Xe'],
-        #         So_KM_Da_Di=item['Số KM Đã Đi'],
-        #         Mau_Ngoai_That=item['Màu Ngoại Thất'],
-        #         Mau_Noi_That=item['Màu Nội Thất'],
-        #         So_Cho_Ngoi=item['Số Chỗ Ngồi'],
-        #         Dong_Co=item['Động Cơ'],
-        #         He_Thong_Nap_Nhien_Lieu=item['Hệ Thống Nạp Nhiên Liệu'],
-        #         Hop_So=item['Hộp Số'],
-        #         Dan_Dong=item['Dẫn Động'],
-        #         Thanh_Pho_MPG=item['Thành Phố MPG'],
-        #         Cao_Toc_MPG=item['Cao Tốc MPG'],
-        #         Chieu_Dai_Co_So=item['Chiều Dài Cơ Sở'],
-        #         Chieu_Dai_Xe=item['Chiều Dài Xe'],
-        #         Chieu_Rong_Xe=item['Chiều Rộng Xe'],
-        #         Chieu_Cao_Xe=item['Chiều Cao Xe'],
-        #         Do_Nang=item['Độ Nặng'],
-        #         Kich_Thuoc_Dong_Co=item['Kích Thước Động Cơ'],
-        #         Ty_So_Duong_Kinh_Xy_Lanh_Pit_Tong=item['Tỷ Số Đường Kính Xy Lanh & Pít Tông'],
-        #         Stroke=item['Stroke'],
-        #         Ma_Luc=item['Mã Lực'],
-        #         So_Vong_Quay_Cuc_Dai=item['Số Vòng Quay Cực Đại'],
-        #         Dia_Chi=item['Địa Chỉ']
-        #     )
-        #     car.save()
+        # Lặp qua mỗi mục trong danh sách JSON và chèn nó vào cơ sở dữ liệu
+        for item in data:
+            car = Car(
+                Model_Xe=item['Model Xe'],
+                Nam_San_Xuat=item['Năm Sản Xuất'],
+                Gia_Tien=item['Gía Tiền'],
+                Xuat_Xu=item['Xuất Xứ'],
+                Tinh_Trang=item['Tình Trạng'],
+                Dong_Xe=item['Dòng Xe'],
+                So_KM_Da_Di=item['Số KM Đã Đi'],
+                Mau_Ngoai_That=item['Màu Ngoại Thất'],
+                Mau_Noi_That=item['Màu Nội Thất'],
+                So_Cho_Ngoi=item['Số Chỗ Ngồi'],
+                Dong_Co=item['Động Cơ'],
+                He_Thong_Nap_Nhien_Lieu=item['Hệ Thống Nạp Nhiên Liệu'],
+                Hop_So=item['Hộp Số'],
+                Dan_Dong=item['Dẫn Động'],
+                Thanh_Pho_MPG=item['Thành Phố MPG'],
+                Cao_Toc_MPG=item['Cao Tốc MPG'],
+                Chieu_Dai_Co_So=item['Chiều Dài Cơ Sở'],
+                Chieu_Dai_Xe=item['Chiều Dài Xe'],
+                Chieu_Rong_Xe=item['Chiều Rộng Xe'],
+                Chieu_Cao_Xe=item['Chiều Cao Xe'],
+                Do_Nang=item['Độ Nặng'],
+                Kich_Thuoc_Dong_Co=item['Kích Thước Động Cơ'],
+                Ty_So_Duong_Kinh_Xy_Lanh_Pit_Tong=item['Tỷ Số Đường Kính Xy Lanh & Pít Tông'],
+                Stroke=item['Stroke'],
+                Ma_Luc=item['Mã Lực'],
+                So_Vong_Quay_Cuc_Dai=item['Số Vòng Quay Cực Đại'],
+                Dia_Chi=item['Địa Chỉ']
+            )
+            car.save()
             # Lưu mẫu xe vào cơ sở dữ liệu
 
         serializer = UserLoginSerializer(data=request.data)
