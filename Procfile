@@ -1,1 +1,1 @@
-web: gunicorn carpricepro.carpricepro.wsgi
+web: gunicorn carpricepro.carpricepro.wsgi --log-file -
