@@ -29,7 +29,7 @@ fastjsonschema==2.18.0
 Flask==2.3.3
 fonttools==4.42.1
 gunicorn==21.2.0
-heroku==0.1.4
+# heroku==0.1.4
 heroku3==5.2.1
 idna==3.4
 ipykernel==6.25.1
