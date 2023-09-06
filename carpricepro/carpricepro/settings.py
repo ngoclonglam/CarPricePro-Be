@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-7=fa6#+z8-ou57e%rfvd66lv041uh!ugt0k5gu)jsb3uz6^x^b
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'carpricepro-be-32f4858056ba.herokuapp.com'
+    'carpricepro-be-32f4858056ba.herokuapp.com',
+    'carpricepro-fe-6941509725a9.herokuapp.com'
 ]
 
 
