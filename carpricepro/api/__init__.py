@@ -1,0 +1,1 @@
+#So you just need to add an empty __init__.py in all your tests folders and it will be it.

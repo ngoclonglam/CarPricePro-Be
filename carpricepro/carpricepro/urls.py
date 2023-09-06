@@ -23,6 +23,6 @@ urlpatterns = [
     path('api/register/', RegisterView.as_view(), name='register'),
     path('api/login/', LoginView.as_view(), name='login'),
     path('api/change_password/', ChangePasswordView.as_view(), name='change_password'),
-    path('api/', include('api.urls')),
+    path('api/', include('carpricepro.api.urls')),
 
 ]
