@@ -81,7 +81,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-ROOT_URLCONF = 'carpricepro.urls'
+ROOT_URLCONF = 'carpricepro.carpricepro.urls'
 
 TEMPLATES = [
     {
