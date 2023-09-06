@@ -3,7 +3,11 @@ import django_filters
 from django.db import models
 from django.contrib.auth.models import User
 
-class Car(models.Model):
+class BaseModel(models.Model):
+    class Meta:
+        abstract = True # specify this model as an Abstract Model
+        app_label = 'carpricepro.api'
+class Car(BaseModel):
     Model_Xe = models.CharField(max_length=255)
     Nam_San_Xuat = models.IntegerField()
     Gia_Tien = models.DecimalField(max_digits=15, decimal_places=2)
