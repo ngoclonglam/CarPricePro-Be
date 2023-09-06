@@ -12,8 +12,8 @@ from rest_framework.permissions import AllowAny
 from django.shortcuts import get_object_or_404
 from django.core.mail import send_mail
 from rest_framework import filters
-from api.models import Car  # Import mô hình Car từ ứng dụng của bạn
-from api.filters import CarFilter
+from carpricepro.api.models import Car  # Import mô hình Car từ ứng dụng của bạn
+from carpricepro.api.filters import CarFilter
 from django_filters.rest_framework import DjangoFilterBackend  # Import DjangoFilterBackend
 from rest_framework import generics
 from nbconvert import PythonExporter
