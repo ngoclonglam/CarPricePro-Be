@@ -1,1 +1,1 @@
-web: gunicorn carpricepro.carpricepro.wsgi:application
+web: gunicorn carpricepro.carpricepro.wsgi
