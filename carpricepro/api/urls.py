@@ -11,5 +11,4 @@ urlpatterns = [
     # Thêm tuyến đường cho CarList
     path('cars/', CarList.as_view(), name='car-list'),
     path('predict_price/', PredictPriceView.as_view(), name='predict_price'),
-
 ]
