@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api.views import RegisterView, LoginView, ChangePasswordView
+from carpricepro.api.views import RegisterView, LoginView, ChangePasswordView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
