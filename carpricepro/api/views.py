@@ -152,7 +152,6 @@ class PredictPriceView(APIView):
             exec(python_code, globals())
           
             # Trích xuất tham số từ request.query_params
-           
             input_data = {
                 'Chiều Dài Cơ Sở': int(request.query_params.get('chieu_dai_co_so', 0)),
                 'Số Chỗ Ngồi': int(request.query_params.get('so_cho_ngoi', 0)),
@@ -165,4 +164,5 @@ class PredictPriceView(APIView):
             # Trả về dự đoán giá tiền
             return Response({'predicted_price': result})
         except Exception as e:
-            return Response({'error': str(e)})
+            # return Response({'error': str(e)})
+            return Response({'predicted_price': 'Dữ liệu không trùng khớp với bộ dữ liệu'})
