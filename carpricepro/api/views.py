@@ -25,6 +25,7 @@ import locale
 from sklearn.metrics import mean_absolute_error
 from nbformat import read
 import json
+import os
 
 class RegisterView(APIView):
     def post(self, request):
@@ -139,7 +140,10 @@ class PredictPriceView(APIView):
             # Đường dẫn đến tệp .ipynb của bạn
             notebook_path = 'api/Car.ipynb'
             print("Đường dẫn tệp Car.ipynb:", notebook_path)
-
+            if os.path.exists(notebook_path):
+                print('This is checked')
+            else:
+                print('not checked')
             # Đọc notebook và chuyển đổi thành mã Python
             with open(notebook_path, 'r', encoding='utf-8') as notebook_file:
                 notebook_content = read(notebook_file, as_version=4)
