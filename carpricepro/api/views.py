@@ -143,6 +143,7 @@ class PredictPriceView(APIView):
             
             # Đọc notebook và chuyển đổi thành mã Python
             with open(notebook_path, 'r', encoding='utf-8') as notebook_file:
+                print('check open this path')
                 notebook_content = read(notebook_file, as_version=4)
                 python_exporter = PythonExporter()
                 python_code, _ = python_exporter.from_notebook_node(notebook_content)
