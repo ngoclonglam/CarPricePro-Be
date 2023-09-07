@@ -138,7 +138,7 @@ class PredictPriceView(APIView):
     def get(self, request):
         try:
             # Đường dẫn đến tệp .ipynb của bạn
-            notebook_path = 'api/Car.ipynb'
+            notebook_path = 'Car.ipynb'
             print("Đường dẫn tệp Car.ipynb:", notebook_path)
             if os.path.exists(notebook_path):
                 print('This is checked')
