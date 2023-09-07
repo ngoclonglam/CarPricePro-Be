@@ -158,8 +158,10 @@ class PredictPriceView(APIView):
                 'Chiều Cao Xe': int(request.query_params.get('chieu_cao_xe', 0)),
                 'Hộp Số': int(request.query_params.get('hop_so', 0))
             }
-            
+            for i in result:
+                print('check: ', i)
             result = predict_price(input_data)
+            print('kết quả: ', result)
             # Trả về dự đoán giá tiền
             return Response({'predicted_price': result})
         except Exception as e:
