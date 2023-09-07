@@ -156,6 +156,8 @@ class PredictPriceView(APIView):
             print('input_sup')
             print('This result: ', int(request.query_params.get('chieu_dai_co_so', 0)))
             print('This result: ', int(request.query_params.get('so_cho_ngoi', 0)))
+            print('This result: ', int(request.query_params.get('chieu_dai_xe', 0)))
+            print('This result: ', int(request.query_params.get('chieu_cao_xe', 0))
             print('check it out')
             input_data = {
                 'Chiều Dài Cơ Sở': int(request.query_params.get('chieu_dai_co_so', 0)),
