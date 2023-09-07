@@ -152,6 +152,7 @@ class PredictPriceView(APIView):
             exec(python_code, globals())
 
             # Trích xuất tham số từ request.query_params
+            print('input_data')
             input_data = {
                 'Chiều Dài Cơ Sở': int(request.query_params.get('chieu_dai_co_so', 0)),
                 'Số Chỗ Ngồi': int(request.query_params.get('so_cho_ngoi', 0)),
@@ -159,7 +160,8 @@ class PredictPriceView(APIView):
                 'Chiều Cao Xe': int(request.query_params.get('chieu_cao_xe', 0)),
                 'Hộp Số': int(request.query_params.get('hop_so', 0))
             }
-            for i in result:
+            print('after input data')
+            for i in input_data:
                 print('check: ', i)
             result = predict_price(input_data)
             print('kết quả: ', result)
