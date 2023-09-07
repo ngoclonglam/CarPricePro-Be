@@ -149,8 +149,9 @@ class PredictPriceView(APIView):
                 python_code, _ = python_exporter.from_notebook_node(notebook_content)
 
             # Thực thi mã Python từ notebook
+            print('before exec')
             exec(python_code, globals())
-
+            print('after exec')
             # Trích xuất tham số từ request.query_params
             print('input_data')
             input_data = {
