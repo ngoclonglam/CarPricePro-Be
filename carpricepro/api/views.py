@@ -160,7 +160,7 @@ class PredictPriceView(APIView):
             }
             
             result = predict_price(input_data)
-            print(result)
+            result = 'Check'
             # Trả về dự đoán giá tiền
             return Response({'predicted_price': result})
         except Exception as e:
