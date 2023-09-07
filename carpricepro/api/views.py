@@ -149,11 +149,9 @@ class PredictPriceView(APIView):
                 python_code, _ = python_exporter.from_notebook_node(notebook_content)
 
             # Thực thi mã Python từ notebook
-            print('before exec')
             exec(python_code, globals())
-            print('after exec')
+            
             # Trích xuất tham số từ request.query_params
-            print('input_sup')
             input_data = {
                 'Chiều Dài Cơ Sở': int(request.query_params.get('chieu_dai_co_so', 0)),
                 'Số Chỗ Ngồi': int(request.query_params.get('so_cho_ngoi', 0)),
@@ -161,11 +159,6 @@ class PredictPriceView(APIView):
                 'Chiều Cao Xe': int(request.query_params.get('chieu_cao_xe', 0)),
                 'Hộp Số': int(request.query_params.get('hop_so', 0))
             }
-            print('after input data')
-            for i in input_data:
-                print('check: ', i)
-            result = predict_price(input_data)
-            print('kết quả: ', result)
             # Trả về dự đoán giá tiền
             return Response({'predicted_price': result})
         except Exception as e:
