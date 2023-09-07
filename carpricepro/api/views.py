@@ -165,4 +165,4 @@ class PredictPriceView(APIView):
             return Response({'predicted_price': result})
         except Exception as e:
             # return Response({'error': str(e)})
-            return Response({'predicted_price': 'Hãy kiểm tra lại các dữ liệu số có nhập sai không?'})
+            return Response({'predicted_price': 'Hãy kiểm tra lại các dữ liệu số nguyên có nhập sai không?'})
