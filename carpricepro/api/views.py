@@ -140,10 +140,7 @@ class PredictPriceView(APIView):
             # Đường dẫn đến tệp .ipynb của bạn
             notebook_path = 'carpricepro/api/Car.ipynb'
             print("Đường dẫn tệp Car.ipynb:", notebook_path)
-            if os.path.exists(notebook_path):
-                print('This is checked')
-            else:
-                print('not checked')
+            
             # Đọc notebook và chuyển đổi thành mã Python
             with open(notebook_path, 'r', encoding='utf-8') as notebook_file:
                 notebook_content = read(notebook_file, as_version=4)
@@ -163,7 +160,7 @@ class PredictPriceView(APIView):
             }
             
             result = predict_price(input_data)
-
+            print(result)
             # Trả về dự đoán giá tiền
             return Response({'predicted_price': result})
         except Exception as e:
