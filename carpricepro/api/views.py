@@ -139,7 +139,7 @@ class PredictPriceView(APIView):
         try:
             # Đường dẫn đến tệp .ipynb của bạn
             notebook_path = 'carpricepro/api/Car.ipynb'
-            print("Đường dẫn tệp Car.ipynb:", notebook_path)
+            # print("Đường dẫn tệp Car.ipynb:", notebook_path)
             
             # Đọc notebook và chuyển đổi thành mã Python
             with open(notebook_path, 'r', encoding='utf-8') as notebook_file:
